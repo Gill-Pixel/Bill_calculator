@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Calculator</title>
+</head>
+<body>
+    <p class="display"></p>
+</body>
+<script>
+        var inputBill = prompt("Please enter your final bill amount : ");
+        inputBill = parseInt(inputBill);
+
+        var taxedBill = inputBill * 0.07;
+        var tip = taxedBill * 0.15;
+        var finalBill = taxedBill + tip; 
+
+        var final = `${taxedBill} + ${tip} = ${finalBill}`;
+
+        var displayBill = document.querySelector(".display");
+        displayBill.innerText = "Your total Bill with tax and tip is: " + final;
+
+</script> 
+
+</html> 
